@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background: #111;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+h1,h3{
+    font-weight: 400;
+}
+.climate-app{
+    background-image: url(./images/day/cloudy.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    opacity: 1;
+}
+.climate-app::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+.left{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em; 
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp,.weather,.city-time{
+    margin: 0 1em;
+}
+.city-time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+.temp{
+    font-size: 7em;
+    margin: 0;
+}
+.weather img{
+    display: block;
+    margin: 0.9em 0;
+}
+.div1 span{
+    margin-left: 4px;
+}
+.right{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+    overflow-y: scroll;
+}
+.right form{
+    margin-bottom: 3em;
+}
+.button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border: none;
+    outline: 0;
+    background: #fa6d1b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+}
+.button:hover{
+    background: #fff !important;
+    color: #000;
+}
+.search{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 0 1em 0.5em 0;
+    width: 80%;
+    color: #fff;
+    font-size: 1.1em;
+}
+.search:focus{
+    outline: none;
+}
+.search::placeholder{
+    color: #ccc;
+}
+.right ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+.right ul li{
+    color: #ccc;
+    margin: 2.5em 0;
+}
+.right ul h4{
+    margin: 3em 0;
+}
+.cities li{
+    display: block;
+    cursor: pointer;
+}
+.cities li:hover{
+    color: #fff;
+}
+.details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
